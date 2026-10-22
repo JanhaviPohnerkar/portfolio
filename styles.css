@@ -1,0 +1,1684 @@
+/* ==========================================================================
+   MINIMALIST ART PORTFOLIO — DARK THEME & ZERO-RADIUS
+   Natural Font Casing (No All-Caps)
+   Side-by-Side Artwork & Text in Vacant Spaces (Permanently Visible)
+   ========================================================================== */
+
+/* Universal Reset & Strict Zero Rounding Enforcement */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important; /* Zero round edges everywhere */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /* Neutral Dark Mode Color Palette */
+  --bg-base: #111110;         /* Deepest neutral carbon */
+  --bg-surface: #181716;      /* Slightly lighter panel tone */
+  --bg-card: #1E1D1B;         /* Artwork backdrop */
+  
+  --border-subtle: #292825;   /* Delicate architectural hairline */
+  --border-strong: #3D3C37;   /* Focused boundary line */
+  
+  --text-main: #EAE8E3;       /* Warm chalk off-white */
+  --text-muted: #9E9C95;      /* Ash gray */
+  --text-dim: #6B6963;        /* Blueprint metadata */
+  
+  --line-main: #EAE8E3;
+  --line-dim: #45443F;
+
+  /* Typography */
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   FULLSCREEN SPLIT HERO (DARK MODE)
+   ========================================================================== */
+.split-hero {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--bg-base);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Left Column: Sticky Identity & Typography */
+.hero-left {
+  background-color: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 48px 64px 40px 64px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 10;
+  border-right: 1px solid var(--border-subtle);
+}
+
+.minimal-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 50% !important;
+}
+
+.portfolio-logo-img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  display: block;
+  border-radius: 50% !important;
+  border: 1.5px solid var(--border-subtle);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.logo-mark:hover .portfolio-logo-img {
+  border-color: var(--border-strong);
+  transform: scale(1.06);
+}
+
+/* Centered Identity Block */
+.identity-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto 0;
+  transform: translateY(-16px);
+}
+
+/* Artist Name (Natural Case, No All-Caps) */
+.artist-name {
+  font-family: var(--font-heading);
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  margin-bottom: 24px;
+  line-height: 1.15;
+  outline: none;
+  cursor: text;
+  text-transform: none; /* No forced uppercase */
+  transition: opacity 0.2s ease;
+}
+
+.artist-name:hover {
+  opacity: 0.85;
+}
+
+/* Role / Discipline List */
+.disciplines-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.role-item {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.35vw, 19px);
+  font-weight: 400;
+  color: var(--text-muted);
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  margin: 0;
+  text-transform: none; /* Natural case */
+}
+
+/* Split Scroll Indicator Arrows */
+.scroll-indicator-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: flex-end;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 25;
+  transition: transform 0.2s ease;
+}
+
+.scroll-indicator-container:hover {
+  transform: translateY(4px);
+}
+
+.down-arrow-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.down-arrow-line .line-stem {
+  display: block;
+  width: 2px;
+  height: 90px;
+}
+
+.down-arrow-line .line-head {
+  display: block;
+  margin-top: -3px;
+}
+
+.arrow-dark-panel {
+  margin-right: 22px;
+  margin-bottom: 40px;
+}
+
+.arrow-dark-panel .line-stem {
+  background-color: var(--line-main);
+}
+
+.arrow-photo-side {
+  transform: translateX(12px);
+  margin-bottom: 40px;
+}
+
+.arrow-photo-side .line-stem {
+  background-color: var(--text-dim);
+}
+
+/* Right Column: Full Natural Portrait (Zero Cropping at Top or Bottom) */
+.hero-right {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-base);
+}
+
+.photo-wrapper {
+  width: 100%;
+  position: relative;
+  /* Enhanced soft merging effect at the bottom */
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 70%,
+    rgba(0, 0, 0, 0.82) 80%,
+    rgba(0, 0, 0, 0.48) 89%,
+    rgba(0, 0, 0, 0.18) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 70%,
+    rgba(0, 0, 0, 0.82) 80%,
+    rgba(0, 0, 0, 0.48) 89%,
+    rgba(0, 0, 0, 0.18) 95%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: contrast(104%) brightness(95%);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-right:hover .hero-image {
+  transform: scale(1.01);
+}
+
+.photo-neutral-filter {
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 68%, rgba(24, 23, 22, 0.45) 86%, var(--bg-surface) 100%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   SECTION: OIL PAINTINGS (DARK MODE & PERMANENT SIDE TEXT)
+   ========================================================================== */
+.gallery-section {
+  width: 100%;
+  background-color: var(--bg-surface);
+  position: relative;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.gallery-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 56px 48px 24px 48px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.title-bar-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.gallery-subtitle-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.gallery-main-title {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 3.2vw, 44px);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-main);
+  margin: 0;
+}
+
+.gallery-count-badge {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   CURATED FLOW CANVAS (SIDE-BY-SIDE WITH VACANT SPACES)
+   ========================================================================== */
+.curated-flow-canvas {
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 90px 48px 130px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+/* Flow Row base */
+.flow-row {
+  display: flex;
+  position: relative;
+  width: 100%;
+  align-items: center;
+}
+
+/* Artwork Housing (Strict Zero Radius, Hairline Border) */
+.free-flow-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.artwork-housing {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  background-color: var(--bg-card);
+  transition: border-color 0.25s ease;
+}
+
+.free-flow-card:hover .artwork-housing {
+  border-color: var(--border-strong);
+}
+
+/* Natural dimensions — uncropped */
+.natural-artwork {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.free-flow-card:hover .natural-artwork {
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+   PERMANENT VACANT-SPACE TEXT PANELS
+   Placed in the open negative space beside the paintings
+   ========================================================================== */
+.vacant-text-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.piece-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.piece-number {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.piece-title {
+  font-family: var(--font-heading);
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 500;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  text-transform: none; /* Natural case */
+}
+
+.piece-description {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  max-width: 420px;
+  text-transform: none;
+}
+
+.piece-specs {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 12px;
+  margin-top: 4px;
+  text-transform: none;
+}
+
+.spec-label {
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   ROW ALIGNMENTS & VACANT SPACE PLACEMENT
+   ========================================================================== */
+
+/* Row 1: Portrait on Left (~42%), Text in Vacant Right Space (~48%) */
+.flow-row-1 {
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.card-portrait-left {
+  width: 440px;
+  max-width: 42%;
+}
+
+.side-right {
+  flex: 1;
+  max-width: 480px;
+  padding-left: 20px;
+}
+
+/* Row 2: Text on Left (~35%), Wide Seascape on Right (~60%) */
+.flow-row-2 {
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.side-left {
+  flex: 1;
+  max-width: 380px;
+  padding-right: 20px;
+}
+
+.card-landscape-wide {
+  width: 780px;
+  max-width: 62%;
+}
+
+/* Row 3: Staggered Pair with Natural Breathing Room */
+.flow-row-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.stagger-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stagger-left-col {
+  padding-top: 60px; /* Offset lower */
+}
+
+.stagger-right-col {
+  padding-bottom: 60px; /* Offset higher */
+}
+
+/* Row 4: Miniature on Left, Text & Notes in Vacant Right Space */
+/* Row 4 & Row 5: Charmander and Plein Air aligned on Left, Text in Vacant Right Space */
+.flow-row-4,
+.flow-row-5 {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 80px;
+  padding-left: 6%;
+}
+
+.card-focal {
+  width: 440px;
+  max-width: 40%;
+}
+
+.focal-text {
+  max-width: 460px;
+}
+
+/* Section Footer Bar */
+.section-footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 64px;
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--bg-base);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  text-transform: none;
+}
+
+/* ==========================================================================
+   SECTION: 3D DESIGN AND RECONSTRUCTION IN FUSION 360
+   ========================================================================== */
+.fusion-section {
+  background-color: var(--bg-base);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.fusion-section .gallery-main-title {
+  letter-spacing: -0.01em;
+}
+
+.fusion-content-wrapper {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 60px 48px 120px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.fusion-grid-row {
+  width: 100%;
+}
+
+.fusion-row-triplet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.fusion-row-duo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.fusion-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.fusion-housing {
+  aspect-ratio: 16 / 10;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s ease;
+}
+
+.fusion-card:hover .fusion-housing {
+  border-color: var(--border-strong);
+}
+
+.fusion-housing img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fusion-diagram-housing {
+  background-color: #6EB2F7;
+}
+
+.fusion-diagram-housing img {
+  object-fit: cover;
+}
+
+.fusion-card:hover .fusion-housing img {
+  transform: scale(1.025);
+}
+
+/* ==========================================================================
+   SECTION: VISUAL SLAM, 3D RECONSTRUCTION & POINT CLOUDS @IIT JODHPUR
+   ========================================================================== */
+.slam-section {
+  background-color: var(--bg-base);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.slam-section .gallery-main-title {
+  letter-spacing: -0.015em;
+  font-size: clamp(24px, 2.5vw, 36px);
+  line-height: 1.25;
+}
+
+.slam-section-statement {
+  max-width: 1060px;
+  margin-top: 14px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-muted);
+  letter-spacing: -0.005em;
+}
+
+.slam-content-wrapper {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 60px 48px 120px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* Flagship Video Block */
+.slam-flagship-block {
+  width: 100%;
+}
+
+.slam-flagship-housing {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 640px;
+  background-color: #0A0A09;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s ease;
+}
+
+.slam-flagship-housing:hover {
+  border-color: var(--border-strong);
+}
+
+.slam-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #0A0A09;
+  display: block;
+}
+
+/* SLAM Grid Rows */
+.slam-grid-row {
+  width: 100%;
+}
+
+.slam-row-duo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  width: 100%;
+}
+
+.slam-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.slam-video-card {
+  cursor: default;
+}
+
+.slam-housing {
+  aspect-ratio: 16 / 10;
+  background-color: var(--bg-card);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s ease;
+}
+
+.slam-photo-housing img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slam-video-housing {
+  background-color: #0A0A09;
+}
+
+/* Portrait Grid Row (Field Test & SIFT Presentation) */
+.slam-row-portrait .slam-housing {
+  aspect-ratio: 1 / 1;
+  max-height: 520px;
+  background-color: var(--bg-surface);
+}
+
+.slam-portrait-housing img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slam-portrait-housing video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #0A0A09;
+}
+
+.slam-card:hover .slam-housing {
+  border-color: var(--border-strong);
+}
+
+.slam-card:hover img {
+  transform: scale(1.025);
+}
+
+/* Captions */
+.slam-card-caption {
+  padding: 12px 2px 0 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.caption-meta-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+}
+
+.caption-tag {
+  color: var(--text-dim);
+}
+
+.caption-format {
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.caption-desc {
+  font-family: var(--font-body);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+/* 3D Point Cloud Scene Reconstructions Group */
+.slam-pointclouds-group {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-top: 12px;
+  padding-top: 36px;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.slam-subgroup-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subgroup-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.subgroup-title {
+  font-family: var(--font-heading);
+  font-size: clamp(20px, 1.8vw, 24px);
+  font-weight: 500;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+.slam-pointcloud-housing {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s ease;
+}
+
+.slam-pointcloud-housing.light-canvas {
+  background-color: #FFFFFF;
+}
+
+.slam-pointcloud-housing.dark-canvas {
+  background-color: #0A0A09;
+}
+
+.slam-pointcloud-housing img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slam-card:hover .slam-pointcloud-housing {
+  border-color: var(--border-strong);
+}
+
+/* ==========================================================================
+   SECTION: HIGH-RESOLUTION MARS DEMS FROM MONOCULAR IMAGES USING PHOTOCLINOMETRY
+   ========================================================================== */
+.mars-section {
+  background-color: var(--bg-base);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.mars-section .gallery-main-title {
+  letter-spacing: -0.015em;
+  font-size: clamp(24px, 2.5vw, 36px);
+  line-height: 1.25;
+}
+
+.mars-content-wrapper {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 60px 48px 120px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.mars-grid-row {
+  width: 100%;
+}
+
+.mars-row-duo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  width: 100%;
+}
+
+.mars-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.mars-housing {
+  aspect-ratio: 16 / 10;
+  background-color: #0A0A09;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s ease;
+}
+
+.mars-housing.mars-dark-housing {
+  background-color: #000000;
+}
+
+.mars-card:hover .mars-housing {
+  border-color: var(--border-strong);
+}
+
+.mars-housing img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mars-card:hover .mars-housing img {
+  transform: scale(1.025);
+}
+
+.mars-card-caption {
+  padding: 12px 2px 0 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ==========================================================================
+   SECTION: SCULPTURE & WOODCRAFT
+   ========================================================================== */
+.sculpture-section {
+  background-color: var(--bg-base);
+}
+
+.sculpture-content-wrapper {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 60px 48px 120px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.process-header-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.process-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.process-subtext {
+  font-family: var(--font-heading);
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+}
+
+/* Horizontal Process Row (4 Columns) */
+.process-horizontal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.process-step-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.process-housing {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background-color: var(--bg-card);
+}
+
+.process-housing img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.process-step-card:hover .process-housing img {
+  transform: scale(1.03);
+}
+
+.process-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 2px 0 2px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+}
+
+.step-num {
+  color: var(--text-muted);
+}
+
+/* Final Sculpture Row (Fifth Image below them) */
+.sculpture-final-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 80px;
+  padding-left: 6%;
+  width: 100%;
+  padding-top: 40px;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+/* Story Transition: So... */
+.sculpture-transition-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.transition-title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 3.8vw, 48px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  margin: 0;
+}
+
+/* 3-Column Horizontal Grid for Process Photos */
+.process-grid-3 {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* Gloves Showcase (Horizontal Pair) */
+.gloves-showcase-block {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.gloves-title {
+  font-family: var(--font-heading);
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.gloves-horizontal-grid {
+  display: grid;
+  grid-template-columns: 230px 230px 1fr;
+  gap: 24px;
+  width: 100%;
+  max-width: 100%;
+  align-items: stretch;
+}
+
+.gloves-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  height: 100%;
+}
+
+.gloves-housing {
+  background-color: var(--bg-card);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s ease;
+  height: 100%;
+}
+
+.gloves-card:hover .gloves-housing {
+  border-color: var(--border-strong);
+}
+
+.gloves-housing img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gloves-card-expand {
+  min-width: 0;
+}
+
+.gloves-card-expand .gloves-housing {
+  height: 100%;
+  display: flex;
+}
+
+.gloves-card-expand .gloves-housing img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.gloves-card:hover .gloves-housing img {
+  transform: scale(1.02);
+}
+
+/* ==========================================================================
+   DEVRAI ART VILLAGE SHOWCASE
+   ========================================================================== */
+.devrai-showcase-block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 50px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.devrai-header-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.devrai-title {
+  font-family: var(--font-heading);
+  font-size: clamp(20px, 1.8vw, 26px);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.devrai-description {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 860px;
+  margin: 0;
+}
+
+.devrai-horizontal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.devrai-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.devrai-housing {
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s ease;
+}
+
+.devrai-card:hover .devrai-housing {
+  border-color: var(--border-strong);
+}
+
+.devrai-housing img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.devrai-card:hover .devrai-housing img {
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   SECTION: TRAVEL JOURNAL & POSTCARDS
+   ========================================================================== */
+.travel-section {
+  background-color: var(--bg-base);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.travel-section .gallery-main-title {
+  letter-spacing: -0.01em;
+}
+
+.gallery-section-subtitle {
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  letter-spacing: -0.01em;
+  margin: 2px 0 0 0;
+}
+
+.travel-content-wrapper {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 60px 48px 120px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.postcard-grid-row {
+  width: 100%;
+}
+
+.postcard-row-quintet {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.postcard-row-triplet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.postcard-row-doublet {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.postcard-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.postcard-housing {
+  background-color: var(--bg-card);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s ease;
+}
+
+.postcard-card:hover .postcard-housing {
+  border-color: var(--border-strong);
+}
+
+.postcard-housing img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.postcard-card:hover .postcard-housing img {
+  transform: scale(1.025);
+}
+
+.portrait-housing {
+  aspect-ratio: 3 / 4;
+}
+
+.square-housing {
+  aspect-ratio: 3 / 4;
+}
+
+.landscape-housing {
+  aspect-ratio: 4 / 3;
+}
+
+/* ==========================================================================
+   SECTION: CLAY GANESHA IDOLS
+   "Making Ganesha since I was 10"
+   ========================================================================== */
+.ganesha-section {
+  background-color: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.ganesha-section .gallery-main-title {
+  letter-spacing: -0.01em;
+}
+
+.ganesha-content-wrapper {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 60px 48px 120px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.ganesha-grid-row {
+  width: 100%;
+}
+
+.ganesha-row-triplet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.ganesha-row-duo {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.ganesha-row-duo .ganesha-card {
+  width: calc((100% - 48px) / 3);
+  max-width: 412px;
+}
+
+.ganesha-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.ganesha-housing {
+  aspect-ratio: 1 / 1;
+  background-color: var(--bg-card);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s ease;
+}
+
+.ganesha-card:hover .ganesha-housing {
+  border-color: var(--border-strong);
+}
+
+.ganesha-housing img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ganesha-card:hover .ganesha-housing img {
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   SECTION: RANDOM SKETCHES, STUDIES & HALF-FINISHED PAINTINGS
+   ========================================================================== */
+.studies-section {
+  background-color: var(--bg-base);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.studies-section .gallery-main-title {
+  letter-spacing: -0.01em;
+}
+
+.studies-content-wrapper {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 60px 48px 120px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.studies-grid-row {
+  width: 100%;
+}
+
+.studies-row-triplet {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.studies-row-duo {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.studies-row-duo-wide {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.studies-row-duo .studies-card {
+  width: calc((100% - 48px) / 3);
+  max-width: 412px;
+}
+
+.studies-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.studies-housing {
+  aspect-ratio: 1 / 1;
+  background-color: var(--bg-card);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  transition: border-color 0.25s ease;
+}
+
+.studies-card:hover .studies-housing {
+  border-color: var(--border-strong);
+}
+
+.studies-housing img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.studies-card:hover .studies-housing img {
+  transform: scale(1.03);
+}
+
+.sketch-sheet-housing {
+  aspect-ratio: 16 / 11;
+  background-color: var(--bg-card);
+}
+
+.sketch-sheet-housing img.contain-art {
+  object-fit: contain;
+  background-color: #F8F6F2;
+}
+
+/* ==========================================================================
+   SQUARE MINIMALIST LIGHTBOX MODAL (DARK THEME)
+   ========================================================================== */
+.square-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.square-lightbox.active {
+  display: flex;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(9, 9, 8, 0.95);
+  backdrop-filter: blur(12px);
+}
+
+.lightbox-container {
+  position: relative;
+  z-index: 10;
+  width: 90vw;
+  max-width: 960px;
+  max-height: 90vh;
+  background-color: var(--bg-base);
+  border: 1px solid var(--border-strong);
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background-color: var(--bg-base);
+}
+
+.lightbox-index {
+  color: var(--text-dim);
+  margin-right: 12px;
+}
+
+.lightbox-title {
+  color: var(--text-main);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.lightbox-close {
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  color: var(--text-main);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.lightbox-close:hover {
+  background-color: var(--text-main);
+  color: var(--bg-base);
+}
+
+.lightbox-image-wrap {
+  padding: 24px;
+  background-color: var(--bg-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: calc(90vh - 70px);
+  overflow: hidden;
+}
+
+.lightbox-image-wrap img {
+  max-width: 100%;
+  max-height: calc(90vh - 120px);
+  object-fit: contain;
+  display: block;
+  border: 1px solid var(--border-subtle);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MAINTAINING RECTILINEAR INTEGRITY)
+   ========================================================================== */
+@media (max-width: 960px) {
+  .curated-flow-canvas {
+    padding: 48px 24px 80px 24px;
+    gap: 70px;
+  }
+
+  .flow-row {
+    flex-direction: column !important;
+    gap: 24px;
+    align-items: flex-start !important;
+    padding: 0 !important;
+  }
+
+  .free-flow-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .side-right, .side-left, .focal-text {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .flow-row-3 {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .stagger-left-col, .stagger-right-col {
+    padding: 0;
+  }
+
+  .section-header-bar {
+    padding: 36px 24px 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .header-right-col {
+    align-items: flex-start;
+  }
+
+  .process-horizontal-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .sculpture-final-row {
+    flex-direction: column !important;
+    gap: 24px !important;
+    align-items: flex-start !important;
+    padding-left: 0 !important;
+  }
+
+  .gloves-horizontal-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  .gloves-card-expand .gloves-housing {
+    height: auto !important;
+  }
+
+  .gloves-card-expand .gloves-housing img {
+    height: auto !important;
+    max-height: 480px;
+  }
+
+  .devrai-horizontal-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .fusion-row-triplet {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .fusion-row-duo,
+  .slam-row-duo,
+  .mars-row-duo {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .postcard-row-quintet {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .postcard-row-triplet {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .postcard-row-doublet {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .ganesha-row-triplet {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .ganesha-row-duo {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .ganesha-row-duo .ganesha-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .studies-row-triplet {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .studies-row-duo {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px !important;
+  }
+
+  .studies-row-duo .studies-card {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .studies-row-duo-wide {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .section-footer-bar {
+    padding: 20px 24px;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .process-horizontal-grid,
+  .devrai-horizontal-grid,
+  .fusion-row-triplet,
+  .fusion-row-duo,
+  .slam-row-duo,
+  .mars-row-duo,
+  .postcard-row-quintet,
+  .postcard-row-triplet,
+  .postcard-row-doublet,
+  .ganesha-row-triplet,
+  .ganesha-row-duo,
+  .studies-row-triplet,
+  .studies-row-duo,
+  .studies-row-duo-wide {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .ganesha-row-duo .ganesha-card,
+  .studies-row-duo .studies-card {
+    width: 100% !important;
+  }
+}

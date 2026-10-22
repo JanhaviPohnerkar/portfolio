@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janhavi Pohnerkar — EnTC Engineer & Artist</title>
+  <link rel="icon" type="image/png" href="assets/flower_logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+  <!-- Fullscreen Split Hero Landing (Dark Mode) -->
+  <section class="split-hero" id="home">
+    
+    <!-- Left Column: Typography & Identity -->
+    <div class="hero-left">
+      
+      <!-- Top Subtle Navigation / Meta -->
+      <header class="minimal-header">
+        <a href="#home" class="logo-mark" aria-label="Portfolio Home" title="Home">
+          <img src="assets/flower_logo.png" alt="Portfolio Logo" class="portfolio-logo-img">
+        </a>
+      </header>
+
+      <!-- Center Content: Name & Disciplines (No All-Caps) -->
+      <div class="identity-block">
+        <h1 class="artist-name" contenteditable="true" spellcheck="false" title="Click to edit name">
+          Janhavi Pohnerkar
+        </h1>
+
+        <div class="disciplines-list">
+          <p class="role-item">EnTC Engineer</p>
+          <p class="role-item">Oil Painter</p>
+          <p class="role-item">Wood &amp; Clay Enthusiast</p>
+          <p class="role-item">Professional Experimenter</p>
+        </div>
+      </div>
+
+      <!-- Bottom Reference Scroll Arrows -->
+      <div class="scroll-indicator-container" id="scrollTrigger">
+        <!-- Light Arrow on dark left panel -->
+        <div class="down-arrow-line arrow-dark-panel" title="Scroll to Oil Paintings">
+          <span class="line-stem"></span>
+          <svg class="line-head" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7L7 13L13 7" stroke="#EAE8E3" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </div>
+
+        <!-- Muted Arrow Crossing boundary -->
+        <div class="down-arrow-line arrow-photo-side" title="Explore Oil Paintings">
+          <span class="line-stem"></span>
+          <svg class="line-head" width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M1 7L7 13L13 7" stroke="#9E9C96" stroke-width="1.5" stroke-linecap="square"/>
+          </svg>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Column: Full-Bleed User Photo with subtle dark tone -->
+    <div class="hero-right">
+      <div class="photo-wrapper">
+        <img 
+          src="assets/profile.jpg?v=2" 
+          alt="EnTC Engineer & Artist" 
+          class="hero-image"
+          id="mainHeroImage"
+        >
+        <div class="photo-neutral-filter"></div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- =======================================================================
+       SECTION: OIL PAINTING — FREE-FLOWING CREATIVE EXHIBITION
+       Text permanently placed in vacant spaces beside images
+       ======================================================================= -->
+  <section class="gallery-section" id="oil-paintings">
+    <!-- Gallery Title Bar: OIL PAINTINGS -->
+    <div class="gallery-title-bar">
+      <div class="title-bar-inner">
+        <span class="gallery-subtitle-tag">[ 01 // Selected Medium ]</span>
+        <h2 class="gallery-main-title">OIL PAINTINGS</h2>
+      </div>
+      <span class="gallery-count-badge">[ 06 Works ]</span>
+    </div>
+
+    <!-- Curated Free-Flow Canvas with Side Text in Vacant Spaces -->
+    <div class="curated-flow-canvas">
+      
+      <!-- Cluster 1: Painting on Left, Text & Annotation in Vacant Right Space -->
+      <div class="flow-row flow-row-1">
+        <article class="free-flow-card card-portrait-left" data-index="01" data-title="My first experiment with oil paints" data-src="assets/paintings/painting1.jpg">
+          <div class="artwork-housing">
+            <img src="assets/paintings/painting1.jpg" alt="My first experiment with oil paints" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <!-- Vacant Space Text Block on Right -->
+        <div class="vacant-text-panel side-right">
+          <div class="piece-meta">
+            <span class="piece-number">[ 01 ]</span>
+            <span class="piece-tag">Figure 01</span>
+          </div>
+          <h3 class="piece-title">My first experiment with oil paints</h3>
+          <p class="piece-description">
+            Monochrome study in cobalt and deep shadows, exploring tonal gradations on paper board.
+          </p>
+          <div class="piece-specs">
+            <span class="spec-label">Medium:</span> Oil on prepared surface<br>
+            <span class="spec-label">Format:</span> Natural portrait
+          </div>
+        </div>
+      </div>
+
+      <!-- Cluster 2: Wide Seascape on Right, Text in Vacant Left Space -->
+      <div class="flow-row flow-row-2">
+        <!-- Vacant Space Text Block on Left -->
+        <div class="vacant-text-panel side-left">
+          <div class="piece-meta">
+            <span class="piece-number">[ 02 ]</span>
+            <span class="piece-tag">Figure 02</span>
+          </div>
+          <h3 class="piece-title">my cecond oil painting</h3>
+          <p class="piece-description">
+            Maritime study of tall-masted vessels cutting through turbulent swells under overcast coastal skies.
+          </p>
+          <div class="piece-specs">
+            <span class="spec-label">Medium:</span> Oil on canvas<br>
+            <span class="spec-label">Format:</span> 16:10 panoramic wide
+          </div>
+        </div>
+
+        <article class="free-flow-card card-landscape-wide" data-index="02" data-title="my cecond oil painting" data-src="assets/paintings/painting2.jpg">
+          <div class="artwork-housing">
+            <img src="assets/paintings/painting2.jpg" alt="my cecond oil painting" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+
+      <!-- Cluster 3: Staggered Pair with Interleaved Text Spaces -->
+      <div class="flow-row flow-row-3">
+        <!-- Piece 03: Streets of Kolkata + text directly below / beside -->
+        <div class="stagger-column stagger-left-col">
+          <article class="free-flow-card" data-index="03" data-title="Streets of Kolkata" data-src="assets/paintings/painting3.jpg">
+            <div class="artwork-housing">
+              <img src="assets/paintings/painting3.jpg" alt="Streets of Kolkata" class="natural-artwork" loading="lazy">
+            </div>
+          </article>
+          
+          <div class="vacant-text-panel inline-text">
+            <div class="piece-meta">
+              <span class="piece-number">[ 03 ]</span>
+              <span class="piece-tag">Figure 03</span>
+            </div>
+            <h3 class="piece-title">Streets of Kolkata</h3>
+            <p class="piece-description">
+              Iconic yellow Ambassador taxis navigating monsoonal reflections, framed by architectural bridge cables.
+            </p>
+          </div>
+        </div>
+
+        <!-- Piece 04: Flanerie + text directly beside -->
+        <div class="stagger-column stagger-right-col">
+          <div class="vacant-text-panel inline-text-top">
+            <div class="piece-meta">
+              <span class="piece-number">[ 04 ]</span>
+              <span class="piece-tag">Figure 04</span>
+            </div>
+            <h3 class="piece-title">Flanerie</h3>
+            <p class="piece-description">
+              Whimsical European-style rooftop towers and clustered dwellings nestled against soft pastel horizons.
+            </p>
+          </div>
+
+          <article class="free-flow-card" data-index="04" data-title="Flanerie" data-src="assets/paintings/painting4.jpg">
+            <div class="artwork-housing">
+              <img src="assets/paintings/painting4.jpg" alt="Flanerie" class="natural-artwork" loading="lazy">
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Cluster 4: Painting on Left, Text & Notes in Vacant Space on Right -->
+      <div class="flow-row flow-row-4">
+        <article class="free-flow-card card-focal" data-index="05" data-title="Charmanderrr" data-src="assets/paintings/painting5.jpg">
+          <div class="artwork-housing">
+            <img src="assets/paintings/painting5.jpg" alt="Charmanderrr" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <div class="vacant-text-panel side-right focal-text">
+          <div class="piece-meta">
+            <span class="piece-number">[ 05 ]</span>
+            <span class="piece-tag">Figure 05</span>
+          </div>
+          <h3 class="piece-title">Charmanderrr</h3>
+          <p class="piece-description">
+            Warm campfire glow contrasting against deep forest foliage under a shooting star night sky.
+          </p>
+          <div class="piece-specs">
+            <span class="spec-label">Medium:</span> Oil on miniature card<br>
+            <span class="spec-label">Format:</span> Hand-held nocturnal study
+          </div>
+        </div>
+      </div>
+
+      <!-- Cluster 5: Plein Air directly below Charmander on Left -->
+      <div class="flow-row flow-row-5">
+        <article class="free-flow-card card-focal" data-index="06" data-title="Plein Air" data-src="assets/paintings/painting6.jpg">
+          <div class="artwork-housing">
+            <img src="assets/paintings/painting6.jpg" alt="Plein Air" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <div class="vacant-text-panel side-right focal-text">
+          <div class="piece-meta">
+            <span class="piece-number">[ 06 ]</span>
+            <span class="piece-tag">Figure 06</span>
+          </div>
+          <h3 class="piece-title">Plein Air</h3>
+          <p class="piece-description">
+            Sun-dappled canopy paths captured en plein air, exploring natural light filtration across an earthy forest track.
+          </p>
+          <div class="piece-specs">
+            <span class="spec-label">Medium:</span> Oil on painter's board<br>
+            <span class="spec-label">Format:</span> Natural vertical study
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Gallery Section Footer / Divider -->
+    <div class="section-footer-bar">
+      <span>Next section: 3D Design and Reconstruction in Fusion 360</span>
+      <span>[ End of oil paintings ]</span>
+    </div>
+
+  </section>
+
+  <!-- =======================================================================
+       SECTION: 3D DESIGN AND RECONSTRUCTION IN FUSION 360
+       CAD Assemblies, Sensor Stands, Robotic Prosthetics & 3D Vision
+       ======================================================================= -->
+  <section class="gallery-section fusion-section" id="fusion-3d">
+    <!-- Gallery Title Bar -->
+    <div class="gallery-title-bar">
+      <div class="title-bar-inner">
+        <span class="gallery-subtitle-tag">[ 02 // CAD &amp; 3D Reconstruction ]</span>
+        <h2 class="gallery-main-title">3D Design and Reconstruction in Fusion 360</h2>
+      </div>
+      <span class="gallery-count-badge">[ 09 Models ]</span>
+    </div>
+
+    <div class="fusion-content-wrapper">
+      <!-- Row 1: Sensor Stand, Camera Mount & 3D Scene Reconstruction (3 Columns) -->
+      <div class="fusion-grid-row fusion-row-triplet">
+        <article class="fusion-card free-flow-card" data-index="CAD01" data-title="Sand Bed Rig &amp; Overhead Sensor Stand // Fusion 360" data-src="assets/fusion360/sand_stand.jpg">
+          <div class="artwork-housing fusion-housing">
+            <img src="assets/fusion360/sand_stand.jpg" alt="Fusion 360 sand stand CAD model" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="fusion-card free-flow-card" data-index="CAD02" data-title="Raspberry Pi Camera Mount Assembly // Multi-Tier Chassis" data-src="assets/fusion360/cam_mount.jpg">
+          <div class="artwork-housing fusion-housing">
+            <img src="assets/fusion360/cam_mount.jpg" alt="Fusion 360 camera mount assembly" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="fusion-card free-flow-card" data-index="CAD03" data-title="3D Depth Sensing &amp; Scene Reconstruction Diagram" data-src="assets/fusion360/depth_reconstruction.png">
+          <div class="artwork-housing fusion-housing fusion-diagram-housing">
+            <img src="assets/fusion360/depth_reconstruction.png" alt="3D depth sensing and reconstruction diagram" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 2: Mechanical & Process Assemblies (2 Columns) -->
+      <div class="fusion-grid-row fusion-row-duo">
+        <article class="fusion-card free-flow-card" data-index="CAD04" data-title="Articulated Robotic Hand Assembly // Actuators &amp; Joints" data-src="assets/fusion360/robotic_hand.jpg">
+          <div class="artwork-housing fusion-housing fusion-wide-housing">
+            <img src="assets/fusion360/robotic_hand.jpg" alt="Articulated robotic hand assembly in Fusion 360" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="fusion-card free-flow-card" data-index="CAD05" data-title="PW Storage Vessel &amp; Industrial Process Piping Layout" data-src="assets/fusion360/industrial_vessels.jpg">
+          <div class="artwork-housing fusion-housing fusion-wide-housing">
+            <img src="assets/fusion360/industrial_vessels.jpg" alt="PW storage vessel and industrial piping assembly" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 3: Telescope Stand & Manifold Hub (2 Columns) -->
+      <div class="fusion-grid-row fusion-row-duo">
+        <article class="fusion-card free-flow-card" data-index="CAD06" data-title="Telescope Stand &amp; Motorized Gear Drive Assembly // Fusion 360" data-src="assets/fusion360/telescope_rig.jpg">
+          <div class="artwork-housing fusion-housing">
+            <img src="assets/fusion360/telescope_rig.jpg" alt="Fusion 360 telescope stand and gear drive assembly CAD model" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="fusion-card free-flow-card" data-index="CAD07" data-title="Flanged Cylindrical Manifold &amp; Radial Mounting Hub // Fusion 360" data-src="assets/fusion360/manifold_housing.jpg">
+          <div class="artwork-housing fusion-housing">
+            <img src="assets/fusion360/manifold_housing.jpg" alt="Fusion 360 flanged manifold and radial mounting hub" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 4: 3D Mesh Reconstruction & Machined Bracket (2 Columns) -->
+      <div class="fusion-grid-row fusion-row-duo">
+        <article class="fusion-card free-flow-card" data-index="CAD08" data-title="3D Triangular Mesh Surface Reconstruction // Point Cloud &amp; Polygonal Model" data-src="assets/fusion360/mesh_reconstruction.jpg">
+          <div class="artwork-housing fusion-housing">
+            <img src="assets/fusion360/mesh_reconstruction.jpg" alt="3D triangular wireframe mesh surface reconstruction" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="fusion-card free-flow-card" data-index="CAD09" data-title="Machined Component Pocket Bracket &amp; Dual-Bore Mounting Plate // Fusion 360" data-src="assets/fusion360/bracket_mount.jpg">
+          <div class="artwork-housing fusion-housing">
+            <img src="assets/fusion360/bracket_mount.jpg" alt="Fusion 360 machined component bracket and mounting plate" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Gallery Section Footer / Divider -->
+    <div class="section-footer-bar">
+      <span>Next section: Visual SLAM · 3D Reconstruction &amp; Point Clouds @IIT Jodhpur</span>
+      <span>[ End of 3D design ]</span>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       SECTION: VISUAL SLAM & 3D RECONSTRUCTION @IIT JODHPUR
+       Monocular & Stereo SLAM, Real-Time Depth Estimation, Point Cloud Registration
+       ======================================================================= -->
+  <section class="gallery-section slam-section" id="visual-slam-iitj">
+    <!-- Gallery Title Bar -->
+    <div class="gallery-title-bar">
+      <div class="title-bar-inner">
+        <span class="gallery-subtitle-tag">[ 03 // Spatial Intelligence &amp; Computer Vision ]</span>
+        <h2 class="gallery-main-title">Visual SLAM · 3D Reconstruction · Point Cloud Registration &amp; Segmentation @IIT Jodhpur</h2>
+        <p class="gallery-section-subtitle slam-section-statement">
+          At IIT Jodhpur, I worked on 3D reconstruction using monocular and stereo video frames, exploring Visual SLAM (Simultaneous Localization and Mapping) and point cloud registration and segmentation. The work involved reconstructing 3D environments from visual data, aligning point clouds, and segmenting the resulting scenes to better understand their spatial structure. This experience allowed me to explore how physical spaces can be represented digitally, combining computer vision, 3D mapping, and spatial analysis.
+        </p>
+      </div>
+      <span class="gallery-count-badge">[ 09 Works // 3 Videos · 6 Visuals ]</span>
+    </div>
+
+    <div class="slam-content-wrapper">
+      <!-- Showcase Block 1: Flagship Live ORB-SLAM3 Trajectory & Map Generation -->
+      <div class="slam-flagship-block">
+        <div class="slam-card slam-video-card">
+          <div class="artwork-housing slam-flagship-housing">
+            <video class="slam-video" controls playsinline preload="metadata">
+              <source src="assets/IITJ/orb_slam3_mapping_demo.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="slam-card-caption">
+            <div class="caption-meta-line">
+              <span class="caption-tag">[ Demonstration // ORB-SLAM3 ]</span>
+              <span class="caption-format">Live Trajectory &amp; 3D Sparse Feature Mapping</span>
+            </div>
+            <p class="caption-desc">
+              Real-time monocular and stereo visual odometry, keyframe extraction, camera pose estimation, and 3D sparse point cloud map reconstruction alongside stereo calibration parameters.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Showcase Block 2: Acquisition Hardware & Live Stereo Depth Estimation (Duo) -->
+      <div class="slam-grid-row slam-row-duo">
+        <!-- Hardware Rover Rig -->
+        <article class="slam-card free-flow-card" data-index="SLAM01" data-title="Stereo Camera Acquisition Rig // Custom 3D-Printed Multi-Tier Rover Chassis" data-src="assets/IITJ/slam_rover_rig.jpg">
+          <div class="artwork-housing slam-housing slam-photo-housing">
+            <img src="assets/IITJ/slam_rover_rig.jpg" alt="Custom 3D-printed stereo camera rover chassis" class="natural-artwork" loading="lazy">
+          </div>
+          <div class="slam-card-caption">
+            <div class="caption-meta-line">
+              <span class="caption-tag">[ Hardware Rig ]</span>
+              <span class="caption-format">3D-Printed Camera Chassis</span>
+            </div>
+            <p class="caption-desc">
+              Custom-modeled multi-tier mounting chassis carrying stereo webcams and compute modules integrated onto a mobile robotic rover.
+            </p>
+          </div>
+        </article>
+
+        <!-- Live Depth Estimation Video -->
+        <div class="slam-card slam-video-card">
+          <div class="artwork-housing slam-housing slam-video-housing">
+            <video class="slam-video" controls playsinline preload="metadata">
+              <source src="assets/IITJ/realtime_depth_estimation.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="slam-card-caption">
+            <div class="caption-meta-line">
+              <span class="caption-tag">[ Real-Time Depth ]</span>
+              <span class="caption-format">Stereo Vision Pipeline</span>
+            </div>
+            <p class="caption-desc">
+              Live stereo camera calibration and dense depth estimation visualized through colorized disparity mapping in the lab.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Showcase Block 3: Field Testing & Academic Presentation (Duo) -->
+      <div class="slam-grid-row slam-row-duo slam-row-portrait">
+        <!-- Rover Field Test Video -->
+        <div class="slam-card slam-video-card">
+          <div class="artwork-housing slam-housing slam-portrait-housing">
+            <video class="slam-video" controls playsinline preload="metadata">
+              <source src="assets/IITJ/slam_rover_field_test.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="slam-card-caption">
+            <div class="caption-meta-line">
+              <span class="caption-tag">[ Field Deployment ]</span>
+              <span class="caption-format">Autonomous Mobile Sequence</span>
+            </div>
+            <p class="caption-desc">
+              Outdoor trajectory and visual frame acquisition at IIT Jodhpur campus with the autonomous rover system.
+            </p>
+          </div>
+        </div>
+
+        <!-- Research Presentation Photo -->
+        <article class="slam-card free-flow-card" data-index="SLAM02" data-title="Research Presentation // Feature Detection: SIFT &amp; Scale Space Theory" data-src="assets/IITJ/sift_presentation.jpg">
+          <div class="artwork-housing slam-housing slam-portrait-housing">
+            <img src="assets/IITJ/sift_presentation.jpg" alt="Research presentation at IIT Jodhpur on SIFT and scale space" class="natural-artwork" loading="lazy">
+          </div>
+          <div class="slam-card-caption">
+            <div class="caption-meta-line">
+              <span class="caption-tag">[ Research Seminar ]</span>
+              <span class="caption-format">SIFT &amp; Scale Space</span>
+            </div>
+            <p class="caption-desc">
+              Presenting on invariant feature detection, scale-space formulation, and matching algorithms for visual odometry.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Showcase Block 4: Dense 3D Point Cloud Scene Reconstruction (Header + 2x2 Grid) -->
+      <div class="slam-pointclouds-group">
+        <div class="slam-subgroup-header">
+          <span class="subgroup-label">[ Spatial Reconstruction // Point Cloud Models ]</span>
+          <h3 class="subgroup-title">Monocular &amp; Stereo Scene Point Cloud Registration</h3>
+        </div>
+
+        <!-- Point Clouds Row 1 -->
+        <div class="slam-grid-row slam-row-duo">
+          <article class="slam-card free-flow-card" data-index="PC01" data-title="3D Point Cloud Environment Reconstruction // Global Hall Overview" data-src="assets/IITJ/pointcloud_overview.jpg">
+            <div class="artwork-housing slam-pointcloud-housing light-canvas">
+              <img src="assets/IITJ/pointcloud_overview.jpg" alt="3D point cloud environment reconstruction overview" class="natural-artwork" loading="lazy">
+            </div>
+            <div class="slam-card-caption">
+              <div class="caption-meta-line">
+                <span class="caption-tag">[ Point Cloud 01 ]</span>
+                <span class="caption-format">Global Hall Overview</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="slam-card free-flow-card" data-index="PC02" data-title="3D Point Cloud Environment Reconstruction // Lecture Stage &amp; Seating Tiers" data-src="assets/IITJ/pointcloud_hall_front.jpg">
+            <div class="artwork-housing slam-pointcloud-housing light-canvas">
+              <img src="assets/IITJ/pointcloud_hall_front.jpg" alt="3D point cloud lecture hall front stage reconstruction" class="natural-artwork" loading="lazy">
+            </div>
+            <div class="slam-card-caption">
+              <div class="caption-meta-line">
+                <span class="caption-tag">[ Point Cloud 02 ]</span>
+                <span class="caption-format">Lecture Stage &amp; Seating Tiers</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Point Clouds Row 2 -->
+        <div class="slam-grid-row slam-row-duo">
+          <article class="slam-card free-flow-card" data-index="PC03" data-title="3D Point Cloud Environment Reconstruction // Auditorium Seating Incline" data-src="assets/IITJ/pointcloud_auditorium_view.jpg">
+            <div class="artwork-housing slam-pointcloud-housing dark-canvas">
+              <img src="assets/IITJ/pointcloud_auditorium_view.jpg" alt="3D point cloud auditorium seating incline perspective" class="natural-artwork" loading="lazy">
+            </div>
+            <div class="slam-card-caption">
+              <div class="caption-meta-line">
+                <span class="caption-tag">[ Point Cloud 03 ]</span>
+                <span class="caption-format">Auditorium Seating Incline</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="slam-card free-flow-card" data-index="PC04" data-title="3D Point Cloud Environment Reconstruction // Aerial Amphitheater Projection" data-src="assets/IITJ/pointcloud_aerial_seating.jpg">
+            <div class="artwork-housing slam-pointcloud-housing light-canvas">
+              <img src="assets/IITJ/pointcloud_aerial_seating.jpg" alt="3D point cloud aerial amphitheater seating projection" class="natural-artwork" loading="lazy">
+            </div>
+            <div class="slam-card-caption">
+              <div class="caption-meta-line">
+                <span class="caption-tag">[ Point Cloud 04 ]</span>
+                <span class="caption-format">Aerial Amphitheater Projection</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Gallery Section Footer / Divider -->
+    <div class="section-footer-bar">
+      <span>Next section: High-Resolution Mars DEMs from Monocular Images</span>
+      <span>[ End of computer vision &amp; SLAM research ]</span>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       SECTION: HIGH-RESOLUTION MARS DEMS FROM MONOCULAR IMAGES USING PHOTOCLINOMETRY
+       Shape from Shading, Topographic Surface Reconstruction & Planetary Remote Sensing
+       ======================================================================= -->
+  <section class="gallery-section mars-section" id="mars-photoclinometry">
+    <!-- Gallery Title Bar -->
+    <div class="gallery-title-bar">
+      <div class="title-bar-inner">
+        <span class="gallery-subtitle-tag">[ 04 // Planetary Remote Sensing &amp; 3D Vision ]</span>
+        <h2 class="gallery-main-title">High-Resolution Mars DEMs from Monocular Images using Photoclinometry</h2>
+        <span class="gallery-section-subtitle">Shape from shading (photoclinometry) pipelines for resolving fine-scale micro-topography, crater depth profiles, and digital elevation models from single orbital optical frames</span>
+      </div>
+      <span class="gallery-count-badge">[ 04 Works ]</span>
+    </div>
+
+    <div class="mars-content-wrapper">
+      <!-- Row 1: Methodology & Raw Surface Capture (2 Columns) -->
+      <div class="mars-grid-row mars-row-duo">
+        <article class="mars-card free-flow-card" data-index="DEM01" data-title="Photoclinometry (Shape from Shading) // Methodology &amp; Framework" data-src="assets/mars_dem/mars_photoclinometry_title.png">
+          <div class="artwork-housing mars-housing">
+            <img src="assets/mars_dem/mars_photoclinometry_title.png" alt="Photoclinometry Shape from Shading overview and Martian terrain" class="natural-artwork" loading="lazy">
+          </div>
+          <div class="mars-card-caption">
+            <div class="caption-meta-line">
+              <span class="caption-tag">[ Methodology ]</span>
+              <span class="caption-format">Shape from Shading</span>
+            </div>
+            <p class="caption-desc">
+              Extracting continuous 3D slope and surface orientation vectors from localized shading variations across Martian orbital imagery.
+            </p>
+          </div>
+        </article>
+
+        <article class="mars-card free-flow-card" data-index="DEM02" data-title="Monocular High-Resolution Orbital Surface // Raw Optical Capture" data-src="assets/mars_dem/mars_monocular_surface.png">
+          <div class="artwork-housing mars-housing">
+            <img src="assets/mars_dem/mars_monocular_surface.png" alt="Monocular high-resolution Martian orbital surface capture" class="natural-artwork" loading="lazy">
+          </div>
+          <div class="mars-card-caption">
+            <div class="caption-meta-line">
+              <span class="caption-tag">[ Optical Input ]</span>
+              <span class="caption-format">Monocular Orbital Frame</span>
+            </div>
+            <p class="caption-desc">
+              High-resolution panchromatic orbital capture of steep crater scarps, alluvial channel gullies, and cratered terrain.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 2: Reconstructed DEM Colormap & 3D Topographic Mesh (2 Columns) -->
+      <div class="mars-grid-row mars-row-duo">
+        <article class="mars-card free-flow-card" data-index="DEM03" data-title="Reconstructed Digital Elevation Model (DEM) // Elevation Colormap" data-src="assets/mars_dem/mars_dem_colormap.jpg">
+          <div class="artwork-housing mars-housing">
+            <img src="assets/mars_dem/mars_dem_colormap.jpg" alt="Reconstructed Mars digital elevation model elevation colormap" class="natural-artwork" loading="lazy">
+          </div>
+          <div class="mars-card-caption">
+            <div class="caption-meta-line">
+              <span class="caption-tag">[ Topographic Output ]</span>
+              <span class="caption-format">High-Resolution DEM Colormap</span>
+            </div>
+            <p class="caption-desc">
+              Computed elevation height field resolving relative depths across steep canyon inclines and fine gully branches.
+            </p>
+          </div>
+        </article>
+
+        <article class="mars-card free-flow-card" data-index="DEM04" data-title="3D Relative Elevation Surface Mesh // Topographic Profiling" data-src="assets/mars_dem/mars_3d_terrain_mesh.png">
+          <div class="artwork-housing mars-housing mars-dark-housing">
+            <img src="assets/mars_dem/mars_3d_terrain_mesh.png" alt="3D relative elevation surface mesh with topographic profile" class="natural-artwork" loading="lazy">
+          </div>
+          <div class="mars-card-caption">
+            <div class="caption-meta-line">
+              <span class="caption-tag">[ 3D Surface ]</span>
+              <span class="caption-format">Terrain Mesh &amp; Elevation Scale</span>
+            </div>
+            <p class="caption-desc">
+              Quantitative 3D surface mesh visualization displaying spatial coordinates (X, Y, Elevation) and relative topographic height scales.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Gallery Section Footer / Divider -->
+    <div class="section-footer-bar">
+      <span>Next section: Sculpture &amp; Woodcraft</span>
+      <span>[ End of Mars photoclinometry &amp; DEM research ]</span>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       SECTION: SCULPTURE & WOODCRAFT
+       Horizontal Process Progression + Curated Final Piece
+       ======================================================================= -->
+  <section class="gallery-section sculpture-section" id="sculpture">
+    
+    <!-- Gallery Title Bar: SCULPTURE -->
+    <div class="gallery-title-bar">
+      <div class="title-bar-inner">
+        <span class="gallery-subtitle-tag">[ 05 // Selected Medium ]</span>
+        <h2 class="gallery-main-title">SCULPTURE</h2>
+      </div>
+      <span class="gallery-count-badge">[ Process &amp; Final Piece ]</span>
+    </div>
+
+    <div class="sculpture-content-wrapper">
+      
+      <!-- Section Sub-header / Narrative Intro -->
+      <div class="process-header-block">
+        <p class="process-subtext">This was a random whittling attempt that turned into a cat.</p>
+      </div>
+
+      <!-- Horizontal Process Row (First Four Images) -->
+      <div class="process-horizontal-grid">
+        
+        <article class="process-step-card free-flow-card" data-index="P1" data-title="Process 01: Raw Whittled Blanks" data-src="assets/sculpture/process1.jpg">
+          <div class="artwork-housing process-housing">
+            <img src="assets/sculpture/process1.jpg" alt="Process 01: Raw whittled wood blanks" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="process-step-card free-flow-card" data-index="P2" data-title="Process 02: Initial Neck Indentation" data-src="assets/sculpture/process2.jpg">
+          <div class="artwork-housing process-housing">
+            <img src="assets/sculpture/process2.jpg" alt="Process 02: Neck indentation" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="process-step-card free-flow-card" data-index="P3" data-title="Process 03: Ear & Body Silhouette" data-src="assets/sculpture/process3.jpg">
+          <div class="artwork-housing process-housing">
+            <img src="assets/sculpture/process3.jpg" alt="Process 03: Ear and body silhouette" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="process-step-card free-flow-card" data-index="P4" data-title="Process 04: Facial & Paw Carving" data-src="assets/sculpture/process4.jpg">
+          <div class="artwork-housing process-housing">
+            <img src="assets/sculpture/process4.jpg" alt="Process 04: Facial and paw carving" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Final Hero Piece Row (Fifth Image, styled like previous painting ones) -->
+      <div class="sculpture-final-row">
+        <article class="free-flow-card card-focal" data-index="01" data-title="The Whittled Cat" data-src="assets/sculpture/final_cat.jpg">
+          <div class="artwork-housing">
+            <img src="assets/sculpture/final_cat.jpg" alt="The Whittled Cat" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <div class="vacant-text-panel side-right focal-text">
+          <div class="piece-meta">
+            <span class="piece-number">[ 01 ]</span>
+            <span class="piece-tag">Sculpture Study</span>
+          </div>
+          <h3 class="piece-title">The Whittled Cat</h3>
+          <div class="piece-specs">
+            <span class="spec-label">Medium:</span> Hand-carved wood<br>
+            <span class="spec-label">Technique:</span> Direct knife whittling<br>
+            <span class="spec-label">Scale:</span> Palm-sized miniature
+          </div>
+        </div>
+      </div>
+
+      <!-- Story Transition: So... -->
+      <div class="sculpture-transition-block">
+        <h3 class="transition-title">So...</h3>
+      </div>
+
+      <!-- Second Cat: Horizontal Process Progression (3 Images) -->
+      <div class="process-horizontal-grid process-grid-3">
+        
+        <article class="process-step-card free-flow-card" data-index="P01" data-title="Process 01" data-src="assets/sculpture/cat2_process1.jpg">
+          <div class="artwork-housing process-housing">
+            <img src="assets/sculpture/cat2_process1.jpg" alt="Process 01" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="process-step-card free-flow-card" data-index="P02" data-title="Process 02" data-src="assets/sculpture/cat2_process2.jpg">
+          <div class="artwork-housing process-housing">
+            <img src="assets/sculpture/cat2_process2.jpg" alt="Process 02" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="process-step-card free-flow-card" data-index="P03" data-title="Process 03" data-src="assets/sculpture/cat2_process3.jpg">
+          <div class="artwork-housing process-housing">
+            <img src="assets/sculpture/cat2_process3.jpg" alt="Process 03" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Second Cat: Same Size as Previous Cat with Only Requested Text -->
+      <div class="sculpture-final-row">
+        <article class="free-flow-card card-focal" data-index="02" data-title="I made another cat" data-src="assets/sculpture/cat2_final.jpg">
+          <div class="artwork-housing">
+            <img src="assets/sculpture/cat2_final.jpg" alt="I made another cat" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <div class="vacant-text-panel side-right focal-text">
+          <h3 class="piece-title">I made another cat</h3>
+        </div>
+      </div>
+
+      <!-- Gloves Section: Horizontal Layout -->
+      <div class="gloves-showcase-block">
+        <h3 class="gloves-title">And designed my own gloves (they were cool though)</h3>
+
+        <div class="gloves-horizontal-grid">
+          <article class="gloves-card free-flow-card" data-index="G1" data-title="And designed my own gloves (they were cool though)" data-src="assets/sculpture/gloves1.jpg">
+            <div class="artwork-housing gloves-housing">
+              <img src="assets/sculpture/gloves1.jpg" alt="And designed my own gloves (they were cool though)" class="natural-artwork" loading="lazy">
+            </div>
+          </article>
+
+          <article class="gloves-card free-flow-card" data-index="G2" data-title="And designed my own gloves (they were cool though)" data-src="assets/sculpture/gloves2.jpg">
+            <div class="artwork-housing gloves-housing">
+              <img src="assets/sculpture/gloves2.jpg" alt="And designed my own gloves (they were cool though)" class="natural-artwork" loading="lazy">
+            </div>
+          </article>
+
+          <article class="gloves-card gloves-card-expand free-flow-card" data-index="G3" data-title="Carved Wooden Hairpin" data-src="assets/sculpture/hairpin.jpg">
+            <div class="artwork-housing gloves-housing">
+              <img src="assets/sculpture/hairpin.jpg" alt="Carved wooden hairpin" class="natural-artwork" loading="lazy">
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Devrai Art Village Showcase: Horizontal Panel -->
+      <div class="devrai-showcase-block">
+        <div class="devrai-header-block">
+          <h3 class="devrai-title">This was inspired from a visit to Devrai Art Village</h3>
+          <p class="devrai-description">It's made up of clay, M-Seal, POP, copper, wooden sticks, and so many other materials — it's an artistic interpretation of Nataraja.</p>
+        </div>
+
+        <div class="devrai-horizontal-grid">
+          <article class="devrai-card free-flow-card" data-index="D01" data-title="Devrai Art Village — Armature &amp; Clay Study" data-src="assets/sculpture/nataraja1.jpg">
+            <div class="artwork-housing devrai-housing">
+              <img src="assets/sculpture/nataraja1.jpg" alt="Devrai Art Village inspired Nataraja - Stage 01" class="natural-artwork" loading="lazy">
+            </div>
+          </article>
+
+          <article class="devrai-card free-flow-card" data-index="D02" data-title="Devrai Art Village — Assembly &amp; Form" data-src="assets/sculpture/nataraja2.jpg">
+            <div class="artwork-housing devrai-housing">
+              <img src="assets/sculpture/nataraja2.jpg" alt="Devrai Art Village inspired Nataraja - Stage 02" class="natural-artwork" loading="lazy">
+            </div>
+          </article>
+
+          <article class="devrai-card free-flow-card" data-index="D03" data-title="Devrai Art Village — Gilded Outdoor Study" data-src="assets/sculpture/nataraja3.jpg">
+            <div class="artwork-housing devrai-housing">
+              <img src="assets/sculpture/nataraja3.jpg" alt="Devrai Art Village inspired Nataraja - Stage 03" class="natural-artwork" loading="lazy">
+            </div>
+          </article>
+
+          <article class="devrai-card free-flow-card" data-index="D04" data-title="Devrai Art Village — Artistic Interpretation of Nataraja" data-src="assets/sculpture/nataraja4.jpg">
+            <div class="artwork-housing devrai-housing">
+              <img src="assets/sculpture/nataraja4.jpg" alt="Devrai Art Village inspired Nataraja - Final Work" class="natural-artwork" loading="lazy">
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Gallery Section Footer / Divider -->
+    <div class="section-footer-bar">
+      <span>Next section: Postcards to myself from my travels</span>
+      <span>[ End of sculpture ]</span>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       SECTION: TRAVEL JOURNAL & POSTCARDS
+       "Postcards to myself from my travels"
+       ======================================================================= -->
+  <section class="gallery-section travel-section" id="travel-postcards">
+    <!-- Gallery Title Bar: Postcards to myself from my travels -->
+    <div class="gallery-title-bar">
+      <div class="title-bar-inner">
+        <span class="gallery-subtitle-tag">[ 06 // Travel Journal ]</span>
+        <h2 class="gallery-main-title">Postcards to myself from my travels</h2>
+        <span class="gallery-section-subtitle">quick sketches in watercolor of places I have been and things I have noticed</span>
+      </div>
+      <span class="gallery-count-badge">[ 08 Works ]</span>
+    </div>
+
+    <div class="travel-content-wrapper">
+      <!-- Row 1: The Travel Journal & Field Studies (5 Columns) -->
+      <div class="postcard-grid-row postcard-row-quintet">
+        <article class="postcard-card free-flow-card" data-index="P01" data-title="Travel Journal — Hand-Embroidered Cover" data-src="assets/postcards/postcard_cover.jpg">
+          <div class="artwork-housing postcard-housing portrait-housing">
+            <img src="assets/postcards/postcard_cover.jpg" alt="Handmade embroidered travel journal cover" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="postcard-card free-flow-card" data-index="P02" data-title="Architectural Study — Dome &amp; Spire" data-src="assets/postcards/postcard_dome.jpg">
+          <div class="artwork-housing postcard-housing portrait-housing">
+            <img src="assets/postcards/postcard_dome.jpg" alt="Architectural ink sketch of dome and spire" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="postcard-card free-flow-card" data-index="P03" data-title="Jodhpur Field Journal // 5 June 2026" data-src="assets/postcards/postcard_rajasthan.jpg">
+          <div class="artwork-housing postcard-housing square-housing">
+            <img src="assets/postcards/postcard_rajasthan.jpg" alt="Jodhpur illustrated journal page" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="postcard-card free-flow-card" data-index="P04" data-title="Mehrangarh Fort // 5 June 2026" data-src="assets/postcards/postcard_mehrangarh.jpg">
+          <div class="artwork-housing postcard-housing portrait-housing">
+            <img src="assets/postcards/postcard_mehrangarh.jpg" alt="Mehrangarh Fort chhatri watercolor study" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="postcard-card free-flow-card" data-index="P05" data-title="On the way to Kaali Tekdi // 12 June 2026" data-src="assets/postcards/postcard_highway.jpg">
+          <div class="artwork-housing postcard-housing portrait-housing">
+            <img src="assets/postcards/postcard_highway.jpg" alt="Highway sign study on the way to Kaali Tekdi" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 2: Wide Open Double-Page Spreads (3 Columns: Peacock, Air & Space) -->
+      <div class="postcard-grid-row postcard-row-triplet">
+        <article class="postcard-card free-flow-card" data-index="P06" data-title="Peacock // Watercolor Spread" data-src="assets/postcards/postcard_peacock.jpg">
+          <div class="artwork-housing postcard-housing landscape-housing">
+            <img src="assets/postcards/postcard_peacock.jpg" alt="Peacock double-page watercolor spread" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="postcard-card free-flow-card" data-index="P07" data-title="Air // Sanskrit Reflection &amp; Canopy Study (13 June 2026)" data-src="assets/postcards/postcard_air.jpg">
+          <div class="artwork-housing postcard-housing landscape-housing">
+            <img src="assets/postcards/postcard_air.jpg" alt="Air Sanskrit reflection and canopy journal spread" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="postcard-card free-flow-card" data-index="P08" data-title="Space // Cosmic Reflection &amp; Celestial Watercolor (7 July 2026)" data-src="assets/postcards/postcard_space.jpg">
+          <div class="artwork-housing postcard-housing landscape-housing">
+            <img src="assets/postcards/postcard_space.jpg" alt="Space Sanskrit reflection and celestial watercolor spread" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Gallery Section Footer / Divider -->
+    <div class="section-footer-bar">
+      <span>Next section: Making Ganesha since I was 10</span>
+      <span>[ End of travel postcards ]</span>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       SECTION: CLAY GANESHA IDOLS
+       "Making Ganesha since I was 10"
+       ======================================================================= -->
+  <section class="gallery-section ganesha-section" id="clay-ganesha">
+    <!-- Gallery Title Bar: Making Ganesha since I was 10 -->
+    <div class="gallery-title-bar">
+      <div class="title-bar-inner">
+        <span class="gallery-subtitle-tag">[ 07 // Handcrafted Clay Idols ]</span>
+        <h2 class="gallery-main-title">Making Ganesha since I was 10</h2>
+      </div>
+      <span class="gallery-count-badge">[ 05 Works ]</span>
+    </div>
+
+    <div class="ganesha-content-wrapper">
+      <!-- Row 1: 3 Idols -->
+      <div class="ganesha-grid-row ganesha-row-triplet">
+        <article class="ganesha-card free-flow-card" data-index="G01" data-title="Clay Bappa // Painted Mukut &amp; Ornaments" data-src="assets/ganesha/ganesha1.jpg">
+          <div class="artwork-housing ganesha-housing">
+            <img src="assets/ganesha/ganesha1.jpg" alt="Handcrafted painted Ganesha idol with crown" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="ganesha-card free-flow-card" data-index="G02" data-title="Handmade Clay Idol // Raw Stage with Mushak" data-src="assets/ganesha/ganesha2.jpg">
+          <div class="artwork-housing ganesha-housing">
+            <img src="assets/ganesha/ganesha2.jpg" alt="Natural clay Ganesha sculpture in progress" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="ganesha-card free-flow-card" data-index="G05" data-title="Bal Ganesha // Modak &amp; Sacred Text" data-src="assets/ganesha/ganesha5.jpg">
+          <div class="artwork-housing ganesha-housing">
+            <img src="assets/ganesha/ganesha5.jpg" alt="Baby Bal Ganesha holding giant modak and book" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 2: Sculpt & Painted Companion Pair (2 Centered Cards) -->
+      <div class="ganesha-grid-row ganesha-row-duo">
+        <article class="ganesha-card free-flow-card" data-index="G03" data-title="Intricate Clay Sculpt // Detailed Carvings" data-src="assets/ganesha/ganesha3.jpg">
+          <div class="artwork-housing ganesha-housing">
+            <img src="assets/ganesha/ganesha3.jpg" alt="Intricately carved clay Ganesha idol before painting" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="ganesha-card free-flow-card" data-index="G04" data-title="Finished Painted Idol // Gilded Gold &amp; Mukut" data-src="assets/ganesha/ganesha4.jpg">
+          <div class="artwork-housing ganesha-housing">
+            <img src="assets/ganesha/ganesha4.jpg" alt="Finished painted Ganesha idol with gold crown" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Gallery Section Footer / Divider -->
+    <div class="section-footer-bar">
+      <span>Next section: Random sketches, studies and half finished paintings</span>
+      <span>[ End of clay idols ]</span>
+    </div>
+  </section>
+
+  <!-- =======================================================================
+       SECTION: RANDOM SKETCHES, STUDIES & HALF-FINISHED PAINTINGS
+       "Random sketches, studies and half finished paintings"
+       ======================================================================= -->
+  <section class="gallery-section studies-section" id="sketches-and-studies">
+    <!-- Gallery Title Bar -->
+    <div class="gallery-title-bar">
+      <div class="title-bar-inner">
+        <span class="gallery-subtitle-tag">[ 08 // Studies &amp; Experiments ]</span>
+        <h2 class="gallery-main-title">Random sketches, studies and half finished paintings</h2>
+      </div>
+      <span class="gallery-count-badge">[ 11 Works ]</span>
+    </div>
+
+    <div class="studies-content-wrapper">
+      <!-- Row 1: 3 Studies -->
+      <div class="studies-grid-row studies-row-triplet">
+        <article class="studies-card free-flow-card" data-index="S01" data-title="Scattered Cotton Candy // Cloud &amp; Cottage Study" data-src="assets/studies/cotton_candy.jpg">
+          <div class="artwork-housing studies-housing">
+            <img src="assets/studies/cotton_candy.jpg" alt="Scattered Cotton Candy framed oil study" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="studies-card free-flow-card" data-index="S02" data-title="Water Lilies // Impressionist Pond Study" data-src="assets/studies/water_lilies.jpg">
+          <div class="artwork-housing studies-housing">
+            <img src="assets/studies/water_lilies.jpg" alt="Impressionist pink water lilies study" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="studies-card free-flow-card" data-index="S03" data-title="Coral Reef // Deep Ocean Life Study" data-src="assets/studies/coral_reef.jpg">
+          <div class="artwork-housing studies-housing">
+            <img src="assets/studies/coral_reef.jpg" alt="Underwater coral reef and fish painting" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 2: 2 Centered Studies -->
+      <div class="studies-grid-row studies-row-duo">
+        <article class="studies-card free-flow-card" data-index="S04" data-title="Kulhad Chai by the Bridge // Atmospheric Twilight" data-src="assets/studies/kulhad_chai.jpg">
+          <div class="artwork-housing studies-housing">
+            <img src="assets/studies/kulhad_chai.jpg" alt="Two kulhads of chai overlooking river bridge at dusk" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="studies-card free-flow-card" data-index="S05" data-title="Open Sky &amp; Rolling Hills // Cloudscape Study" data-src="assets/studies/cloud_landscape.jpg">
+          <div class="artwork-housing studies-housing">
+            <img src="assets/studies/cloud_landscape.jpg" alt="Cloudscape and rolling hills oil study" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 3: Figure & Portrait Studies (2 Columns) -->
+      <div class="studies-grid-row studies-row-duo-wide">
+        <article class="studies-card free-flow-card" data-index="S06" data-title="Portrait &amp; Angle Studies // Red Pencil" data-src="assets/studies/sketch_portraits.jpg">
+          <div class="artwork-housing studies-housing sketch-sheet-housing">
+            <img src="assets/studies/sketch_portraits.jpg" alt="Red pencil portrait and head angle studies" class="natural-artwork contain-art" loading="lazy">
+          </div>
+        </article>
+
+        <article class="studies-card free-flow-card" data-index="S07" data-title="Character &amp; Expression Studies // Blue Pencil" data-src="assets/studies/sketch_blue_figures.jpg">
+          <div class="artwork-housing studies-housing sketch-sheet-housing">
+            <img src="assets/studies/sketch_blue_figures.jpg" alt="Blue pencil character and expression studies" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 4: Costume & Gesture Thumbnails (2 Columns) -->
+      <div class="studies-grid-row studies-row-duo-wide">
+        <article class="studies-card free-flow-card" data-index="S08" data-title="Costume &amp; Gesture Thumbnails // Figure Study 01" data-src="assets/studies/sketch_costumes1.jpg">
+          <div class="artwork-housing studies-housing sketch-sheet-housing">
+            <img src="assets/studies/sketch_costumes1.jpg" alt="Costume and drapery thumbnail sketches" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+
+        <article class="studies-card free-flow-card" data-index="S09" data-title="Silhouettes &amp; Character Concepts // Figure Study 02" data-src="assets/studies/sketch_costumes2.jpg">
+          <div class="artwork-housing studies-housing sketch-sheet-housing">
+            <img src="assets/studies/sketch_costumes2.jpg" alt="Character silhouettes and archer concepts" class="natural-artwork" loading="lazy">
+          </div>
+        </article>
+      </div>
+
+      <!-- Row 5: Character Doodles & Botanical Pencil Studies (2 Columns) -->
+      <div class="studies-grid-row studies-row-duo-wide">
+        <article class="studies-card free-flow-card" data-index="S10" data-title="Character Doodles &amp; Mischievous Cat // Pencil Sketches" data-src="assets/studies/sketch_character_doodles.jpg">
+          <div class="artwork-housing studies-housing sketch-sheet-housing">
+            <img src="assets/studies/sketch_character_doodles.jpg" alt="Pencil character doodles, smiling cat, clown and figures" class="natural-artwork contain-art" loading="lazy">
+          </div>
+        </article>
+
+        <article class="studies-card free-flow-card" data-index="S11" data-title="Potted Plant &amp; Climbing Ivy // Pencil Botanical Study" data-src="assets/studies/sketch_potted_plants.jpg">
+          <div class="artwork-housing studies-housing sketch-sheet-housing">
+            <img src="assets/studies/sketch_potted_plants.jpg" alt="Pencil sketch of leafy potted plants and climbing vine" class="natural-artwork contain-art" loading="lazy">
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Final Portfolio Footer -->
+    <div class="section-footer-bar">
+      <span>Portfolio archive // EnTC Engineer &amp; Artist</span>
+      <span>[ End of works ]</span>
+    </div>
+  </section>
+
+  <!-- Fullscreen Minimalist Lightbox Modal (Dark Theme, Strict Square) -->
+  <div class="square-lightbox" id="lightboxModal">
+    <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+    <div class="lightbox-container">
+      <div class="lightbox-header">
+        <span class="lightbox-index" id="modalIndex">[ 01 ]</span>
+        <span class="lightbox-title" id="modalTitle">Painting title</span>
+        <button class="lightbox-close" id="modalCloseBtn" title="Close">[ Esc / ✕ ]</button>
+      </div>
+      <div class="lightbox-image-wrap">
+        <img id="modalImage" src="" alt="Enlarged painting view">
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
